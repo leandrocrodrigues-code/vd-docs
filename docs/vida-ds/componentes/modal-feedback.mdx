@@ -1,0 +1,61 @@
+---
+title: Modal Feedback
+description: Composição do Card dedicada a comunicar mensagens de retorno ao usuário após uma ação executada, com contexto visual coerente ao tipo de mensagem.
+sidebar_position: 30
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Modal Feedback
+
+Modal Feedback é uma composição do componente Card (Template) da biblioteca de Design System. É um componente dedicado a comunicar mensagens de retorno ao usuário, geralmente após uma ação executada, como envio de formulário, conclusão de processo ou ocorrência de erro. Ele deve ser utilizado para destacar de forma clara e objetiva o resultado de uma interação, oferecendo contexto visual coerente com o tipo de mensagem, como sucesso, alerta ou erro e, quando necessário, apresentar ações complementares que incentivem a continuidade da jornada do usuário.
+
+<Tabs groupId="tech" queryString>
+  <TabItem value="figma" label="Figma" default>
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FCKUcFnQotY9rWVBfOUtxq8%2FWinthor---UI-KIT-Delphi--Evolu%25C3%25A7%25C3%25A3o--Pr%25C3%25A9-publica%25C3%25A7%25C3%25A3o-%3Fnode-id%3D12138-2494"
+      style={{width: '100%', height: '520px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}
+      allowFullScreen
+      loading="lazy"
+    />
+  </TabItem>
+  <TabItem value="poui" label="POUi">
+    <iframe
+      src="https://leandrocrodrigues-code.github.io/vd-design-bridge/iframe.html?id=componentes-poui-modal-feedback--playground&viewMode=story"
+      style={{width: '100%', height: '640px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', background: '#fff'}}
+      loading="lazy"
+    />
+    <p>Outras stories: <a href="https://leandrocrodrigues-code.github.io/vd-design-bridge/?path=/docs/componentes-poui-modal-feedback--playground" target="_blank" rel="noopener">abrir no Storybook</a>.</p>
+  </TabItem>
+</Tabs>
+
+## Guidelines
+
+### Anatomia
+
+Como é um componente Composition, sua estrutura é composta por elementos da biblioteca, permitindo combinações a partir dos próprios componentes e variações.
+
+> ⚠️ Revisar imagem: anatomia do Modal Feedback com elementos da biblioteca
+
+### Variantes
+
+#### Tamanho único
+
+Disponível apenas em 1 tamanho.
+
+> ⚠️ Revisar imagem: tamanho único do Modal Feedback
+
+#### Feedbacks
+
+Aplique cada Modal Feedback conforme a situação do usuário:
+
+Brand para mensagens institucionais ou mensagens do software. Neutral para comunicações neutras ou estados vazios. Informative para contextualizar processos ou orientar o usuário. Processing para ações que têm continuidade assíncrona ou com término não definido. Date Success para agendamentos com data. Success para confirmar ações concluídas corretamente. Warning para chamar atenção a situações que exigem cuidado. Alert para indicar falhas críticas que impedem a continuidade da ação.Mantenha consistência no tom e na hierarquia visual de cada mensagem, garantindo clareza e comunicação eficiente dentro do modal.
+
+> ⚠️ Revisar imagem: variações de feedback do Modal Feedback
+
+## Specs
+
+O componente deve seguir os padrões consistentes de tamanho e espaçamento:
+
+> ⚠️ Revisar imagem: specs de tamanho e espaçamento do Modal Feedback

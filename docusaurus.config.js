@@ -47,7 +47,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           sidebarPath: './sidebars.js',
           remarkPlugins: [remarkEmbeds],
           showLastUpdateTime: false,
@@ -64,8 +64,9 @@ const config = {
       {
         hashed: true,
         language: ['pt', 'en'],
-        docsRouteBasePath: '/',
+        docsRouteBasePath: '/docs',
         indexBlog: false,
+        indexPages: true,
         highlightSearchTermsOnTargetPage: true,
       },
     ],
@@ -79,7 +80,10 @@ const config = {
         title: 'Design System V&D',
         logo: {alt: 'TOTVS', src: 'img/logo.svg', srcDark: 'img/logo-dark.svg'},
         items: [
-          {type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Documentação'},
+          {type: 'docSidebar', sidebarId: 'nossoTime', position: 'left', label: 'Nosso Time'},
+          {type: 'docSidebar', sidebarId: 'researchOps', position: 'left', label: 'Research Ops'},
+          {type: 'docSidebar', sidebarId: 'vidaDs', position: 'left', label: 'Vida DS'},
+          {type: 'docSidebar', sidebarId: 'guias', position: 'left', label: 'Guias'},
           {href: STORYBOOK_URL, label: 'Storybook', position: 'right'},
           {href: 'pathname:///admin/', label: 'Editar', position: 'right', target: '_self'},
         ],

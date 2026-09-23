@@ -6,7 +6,7 @@ import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(root, 'tokens', f), 'utf8'));
-const out = path.join(root, 'docs', 'fundamentos');
+const out = path.join(root, 'docs', 'vida-ds', 'estilos');
 fs.mkdirSync(out, {recursive: true});
 
 const AVISO =
@@ -173,4 +173,4 @@ ${tabela(radius, 'Corner radius', box)}
 `;
 fs.writeFileSync(path.join(out, 'espacamento.mdx'), esp);
 
-console.log('Fundamentos gerados em docs/fundamentos/');
+console.log('Fundamentos gerados em docs/vida-ds/estilos/');

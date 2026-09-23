@@ -1,0 +1,90 @@
+---
+title: Hero
+description: Topo estruturante da interface que oferece contexto imediato sobre a tela atual, com título, navegação secundária e elementos de suporte à orientação.
+sidebar_position: 25
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Hero
+
+Ele é um elemento persistente e global, exibido em todas as páginas da aplicação. Seu conteúdo principal inclui o título da página, mas pode também acomodar navegação secundária, menu do usuário, atalhos e elementos de suporte à orientação do usuário. Ao estabelecer hierarquia visual e funcional logo no início da tela, o Hero garante consistência, reconhecibilidade e eficiência na navegação.
+
+<Tabs groupId="tech" queryString>
+  <TabItem value="figma" label="Figma" default>
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FCKUcFnQotY9rWVBfOUtxq8%2FWinthor---UI-KIT-Delphi--Evolu%25C3%25A7%25C3%25A3o--Pr%25C3%25A9-publica%25C3%25A7%25C3%25A3o-%3Fnode-id%3D5046-9134%26t%3DcQTb9S6kABOwBlKW-11"
+      style={{width: '100%', height: '520px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}
+      allowFullScreen
+      loading="lazy"
+    />
+  </TabItem>
+  <TabItem value="poui" label="POUi">
+    <iframe
+      src="https://leandrocrodrigues-code.github.io/vd-design-bridge/iframe.html?id=componentes-poui-hero-composi%C3%A7%C3%A3o--playground&viewMode=story"
+      style={{width: '100%', height: '640px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', background: '#fff'}}
+      loading="lazy"
+    />
+    <p>Outras stories: <a href="https://leandrocrodrigues-code.github.io/vd-design-bridge/?path=/docs/componentes-poui-hero-composi%C3%A7%C3%A3o--playground" target="_blank" rel="noopener">abrir no Storybook</a>.</p>
+  </TabItem>
+</Tabs>
+
+## Guidelines
+
+### Anatomia
+
+Como é um componente do tipo Composition, sua estrutura usa elementos da biblioteca, permitindo combinações a partir dos próprios componentes e suas variações:
+
+* Section Header • **Acessar documentação**
+* Search • **Acessar documentação**
+* Tag • **Acessar documentação**
+* Button • **Acessar documentação**
+* Divider • **Acessar documentação **
+* Icons • **Acessar biblioteca**
+
+> ⚠️ Revisar imagem: anatomia do Hero com elementos da biblioteca
+
+### Variantes
+
+#### Tamanho único
+
+Disponível apenas em 1 tamanho.
+
+> ⚠️ Revisar imagem: tamanho único do Hero
+
+#### Estados
+
+Ao interagir com o componente, ele deve seguir as interações demonstradas a seguir:
+
+> ⚠️ Revisar imagem: estados de interação do Hero
+
+#### Rolagem junto com a tela
+
+O componente acompanha o movimento da página: ele é exibido inicialmente, mas desaparece conforme o usuário rola para baixo e pode reaparecer ao rolar para cima. Esse padrão melhora o foco no conteúdo, liberando espaço visual durante a navegação, sem perder totalmente o acesso ao Hero quando necessário.
+
+> ⚠️ Revisar imagem: comportamento de rolagem junto com a tela
+
+#### Fixado no topo
+
+O comportamento Fixed mantém o componente fixo no topo da tela, mesmo quando o usuário rola a página para baixo. Ele permanece visível o tempo todo, garantindo acesso constante às informações ou ações contidas no Hero, como título da página, filtros ou botões principais. Esse comportamento é ideal para contextos em que a navegação ou controle precisa estar sempre acessível.
+
+> ⚠️ Revisar imagem: comportamento fixado no topo da tela
+
+#### Nível 1 • Página Principal (N1)
+
+O Hero de Nível 1 (N1) é usado em páginas principais ou iniciais de uma seção. Ele apresenta apenas o título da página, sem botões de voltar ou ações extras no topo, reforçando que o usuário está no início de um fluxo ou estrutura. Esse nível tem como objetivo oferecer clareza e foco ao conteúdo principal, evitando distrações ou opções de navegação desnecessárias.
+
+> ⚠️ Revisar imagem: Hero de Nível 1 em página principal
+
+#### Nível 2 • Páginas Internas (N2)
+
+O Hero de Nível 2 (N2) é aplicado em páginas internas, acessadas a partir de uma estrutura de navegação. Ele inclui um botão de voltar, permitindo que o usuário retorne ao nível anterior, além de ações contextuais no topo, como filtros, edição ou outras interações relevantes. Esse modelo reforça a noção de profundidade e ajuda o usuário a se localizar dentro da hierarquia do sistema.
+
+> ⚠️ Revisar imagem: Hero de Nível 2 em página interna com voltar
+
+## Specs
+
+O componente deve seguir os padrões consistentes de tamanho e espaçamento:
+
+> ⚠️ Revisar imagem: specs de tamanho e espaçamento do Hero

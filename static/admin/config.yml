@@ -23,19 +23,20 @@ local_backend: true
 locale: pt
 site_url: https://leandrocrodrigues-code.github.io/vd-docs/
 display_url: https://leandrocrodrigues-code.github.io/vd-docs/
-logo_url: /vd-docs/img/logo-azul.svg
+logo_url: /vd-docs/img/logo.svg
 
 media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
+  # Vida DS
   - name: componentes
-    label: Componentes
+    label: 'Vida DS · Componentes'
     label_singular: Componente
-    folder: docs/componentes
+    folder: docs/vida-ds/componentes
     create: true
     delete: true
-    extension: md
+    extension: mdx
     format: frontmatter
     slug: '{{slug}}'
     summary: '{{title}}'
@@ -47,16 +48,58 @@ collections:
       - { label: 'Ordem no menu', name: 'sidebar_position', widget: 'number', value_type: 'int', required: false, hint: 'Número menor aparece primeiro.' }
       - { label: 'Conteúdo', name: 'body', widget: 'markdown', modes: ['rich_text', 'raw'], editor_components: ['image', 'code-block', 'figma', 'storybook'] }
 
-  - name: templates
-    label: Templates de tela
-    label_singular: Template
-    folder: docs/templates
+  - name: estilos
+    label: 'Vida DS · Estilos'
+    label_singular: Estilo
+    folder: docs/vida-ds/estilos
+    create: false
+    filter: { field: 'title', pattern: '^(?!Cores$|Tipografia$|Espaçamento).*' }
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  - name: tokens
+    label: 'Vida DS · Tokens'
+    folder: docs/vida-ds/tokens
     create: true
     extension: md
     format: frontmatter
     slug: '{{slug}}'
     fields: *campos
 
+  - name: comportamentos
+    label: 'Vida DS · Comportamentos'
+    folder: docs/vida-ds/comportamentos
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  # Nosso Time
+  - name: nosso-time
+    label: 'Nosso Time'
+    label_singular: Página
+    folder: docs/nosso-time
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  # Research Ops
+  - name: research-ops
+    label: 'Research Ops'
+    label_singular: Página
+    folder: docs/research-ops
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  # Guias
   - name: guias
     label: Guias
     label_singular: Guia
@@ -67,16 +110,12 @@ collections:
     slug: '{{slug}}'
     fields: *campos
 
-  - name: paginas
-    label: Páginas fixas
-    files:
-      - label: Introdução (página inicial)
-        name: intro
-        file: docs/intro.md
-        fields:
-          - { label: 'Título', name: 'title', widget: 'string' }
-          - { label: 'Endereço', name: 'slug', widget: 'hidden', default: '/' }
-          - { label: 'Nome no menu', name: 'sidebar_label', widget: 'string' }
-          - { label: 'Ordem no menu', name: 'sidebar_position', widget: 'hidden', default: 1 }
-          - { label: 'Resumo', name: 'description', widget: 'string', required: false }
-          - { label: 'Conteúdo', name: 'body', widget: 'markdown', modes: ['rich_text', 'raw'], editor_components: ['image', 'code-block', 'figma', 'storybook'] }
+  - name: templates
+    label: 'Guias · Templates de tela'
+    label_singular: Template
+    folder: docs/guias/templates
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos

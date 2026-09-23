@@ -1,0 +1,71 @@
+---
+title: Dropdown
+description: O Dropdown exibe uma lista de opções de forma compacta, permitindo que o usuário selecione uma única opção a partir de uma lista suspensa.
+sidebar_position: 23
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Dropdown
+
+O Dropdown é utilizado para exibir uma lista de opções de forma compacta, permitindo que o usuário selecione uma única opção a partir de uma lista suspensa.
+
+<Tabs groupId="tech" queryString>
+  <TabItem value="figma" label="Figma" default>
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FCKUcFnQotY9rWVBfOUtxq8%2FWinthor---UI-KIT-Delphi--Evolu%25C3%25A7%25C3%25A3o--Pr%25C3%25A9-publica%25C3%25A7%25C3%25A3o-%3Fnode-id%3D265-1506%26t%3DcQTb9S6kABOwBlKW-4"
+      style={{width: '100%', height: '520px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}
+      allowFullScreen
+      loading="lazy"
+    />
+  </TabItem>
+  <TabItem value="poui" label="POUi">
+    <iframe
+      src="https://leandrocrodrigues-code.github.io/vd-design-bridge/iframe.html?id=poui-select-dropdown--docs&viewMode=docs"
+      style={{width: '100%', height: '640px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', background: '#fff'}}
+      loading="lazy"
+    />
+    <p>Outras stories: <a href="https://leandrocrodrigues-code.github.io/vd-design-bridge/?path=/docs/poui-select-dropdown--docs" target="_blank" rel="noopener">abrir no Storybook</a>.</p>
+  </TabItem>
+</Tabs>
+
+É ideal para interfaces que exigem economia de espaço e clareza na apresentação de múltiplas alternativas, mantendo a experiência do usuário simples, objetiva e intuitiva. O componente é frequentemente aplicado em formulários, filtros, menus de ações e seleções contextuais, proporcionando uma navegação limpa e organizada. Sua aparência discreta contribui para interfaces mais minimalistas e funcionais.
+
+**Diferença entre Dropdown e Combobox**
+
+Enquanto o Dropdown limita-se à seleção de uma opção previamente definida na lista, o Combobox permite ao usuário digitar um valor livremente, com ou sem sugestão baseada nas opções existentes (autocompletável). Ou seja, o Dropdown é estático e direto; o Combobox é mais flexível e interativo.
+
+## Guidelines
+
+### Anatomia
+
+Disponível em 2 tamanhos: LG e MD.
+
+> ⚠️ Revisar imagem: anatomia do Dropdown em LG e MD
+
+### Variantes
+
+#### Tamanho
+
+O componente está disponível em dois tamanhos: LG e MD. A única diferença visual entre os tamanhos está no campo de seleção (altura e padding) e tamanho de fonte. A lista de opções mantém o mesmo tamanho de fonte e espaçamento independentemente do tamanho do dropdown.
+
+> ⚠️ Revisar imagem: tamanhos LG e MD do Dropdown
+
+#### Estados
+
+Segue as mesmas interações já declaradas para o Input Text (campo de texto): Input Text • Acessar documentação
+
+> ⚠️ Revisar imagem: estados do Dropdown
+
+#### Dropdown e conteúdo
+
+Dropdowns simples são componentes utilizados para apresentar uma lista compacta de opções, visível somente após a interação do usuário. São ideais para escolhas diretas onde não há necessidade de digitação ou busca. O conteúdo do dropdown deve ser claro, conciso e conter uma quantidade limitada de itens para manter a usabilidade. Esse padrão é recomendado quando as opções são conhecidas, previsíveis e não exigem filtro dinâmico.
+
+> ⚠️ Revisar imagem: dropdown aberto exibindo lista de opções
+
+## Specs
+
+O componente deve seguir padrões consistentes de tamanho, espaçamento.
+
+> ⚠️ Revisar imagem: specs de tamanho e espaçamento do Dropdown

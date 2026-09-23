@@ -1,0 +1,78 @@
+---
+title: Table (Grid)
+description: Componentes essenciais para exibir grandes volumes de dados estruturados de forma organizada e comparável.
+sidebar_position: 40
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Table (Grid)
+
+Elas permitem que o usuário navegue, filtre, ordene e analise informações com eficiência. A estrutura segue princípios de hierarquia tipográfica, alinhamento e espaçamento para garantir legibilidade em diferentes densidades de conteúdo. Elementos como cabeçalhos fixos, ícones e ações contextuais complementam a experiência, apoiando tanto a leitura rápida quanto a tomada de decisão em interfaces orientadas a dados.
+
+<Tabs groupId="tech" queryString>
+  <TabItem value="figma" label="Figma" default>
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FCKUcFnQotY9rWVBfOUtxq8%2FWinthor---UI-KIT-Delphi--Evolu%25C3%25A7%25C3%25A3o--Pr%25C3%25A9-publica%25C3%25A7%25C3%25A3o-%3Fnode-id%3D5321-52444%26t%3DcQTb9S6kABOwBlKW-11"
+      style={{width: '100%', height: '520px', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}
+      allowFullScreen
+      loading="lazy"
+    />
+  </TabItem>
+</Tabs>
+
+## Guidelines
+
+### Anatomia
+
+Como é um componente do tipo Composition, sua estrutura usa elementos da biblioteca, permitindo combinações a partir dos próprios componentes e suas variações:
+
+* Checkbox • **Acessar documentação**
+* Radio • **Acessar documentação**
+* Button • **Acessar documentação**
+* Icon • **Acessar biblioteca**
+
+> ⚠️ Revisar imagem: anatomia da Table com componentes combinados
+
+### Variantes
+
+#### Partes da tabela
+
+A tabela é composta por seções funcionais que organizam e distribuem os dados de forma clara e escalável. Os Cell Headers definem os títulos das colunas e podem conter elementos como rótulos, ícones, menus ou ordenações, organizados entre células principais (leading) e auxiliares (trailing). Já as Cell Rows representam o conteúdo das linhas, podendo conter rótulos, valores, ações contextuais, tags e checkboxes.
+
+> ⚠️ Revisar imagem: partes da tabela (headers e rows)
+
+#### Estados
+
+As tabelas apresentam diferentes estados visuais para indicar ações e interações do usuário. O estado de hover realça a linha sob o cursor, sinalizando que ela é interativa. Já o estado de seleção exibe checkboxes visíveis na primeira coluna e destaca visualmente as linhas marcadas, reforçando a ação de escolha.
+
+> ⚠️ Revisar imagem: estados de hover e seleção da tabela
+
+#### Tipos de rolagem
+
+A tabela pode ser configurada com diferentes comportamentos de rolagem para melhor se adaptar ao volume e à densidade dos dados exibidos. Quando o conteúdo está dentro dos limites visuais, não há rolagem. Já em casos de excesso de informação, pode ser necessário ativar rolagem vertical, horizontal ou em ambas as direções. Também é possível fixar colunas específicas (como ações ou seleção) para que permaneçam visíveis mesmo durante a navegação.
+
+> ⚠️ Revisar imagem: tipos de rolagem em tabela
+
+### Boas práticas
+
+#### Evite dados ou conteúdos textuais longos
+
+Evite inserir textos longos nas células da tabela. O excesso de conteúdo dificulta a leitura, prejudica o alinhamento visual e compromete a escaneabilidade. Priorize frases curtas ou palavras-chave, mantendo, idealmente, até duas linhas de altura por célula.
+
+> ⚠️ Revisar imagem: exemplo de conteúdo textual longo em célula
+
+#### Evite rolagens decorrente de colunas desnecessárias largas
+
+Evite configurar colunas com larguras excessivas ou desproporcionais ao conteúdo que exibem. Isso pode forçar a rolagem horizontal, especialmente em telas menores, comprometendo a leitura e a usabilidade. Priorize o ajuste de cada coluna ao tamanho real da informação, mantendo o layout da tabela limpo, eficiente e sem excesso de espaço vazio.
+
+> ⚠️ Revisar imagem: colunas com largura desproporcional
+
+## Specs
+
+### Specs
+
+O componente deve seguir padrões consistentes de tamanho e espaçamento demonstrado abaixo:
+
+> ⚠️ Revisar imagem: specs de tamanho e espaçamento da tabela

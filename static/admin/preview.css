@@ -1,0 +1,10 @@
+@font-face { font-family: 'Lato'; font-weight: 400; src: url('lato-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lato'; font-weight: 700; src: url('lato-latin-700-normal.woff2') format('woff2'); }
+body { font-family: 'Lato', system-ui, sans-serif; color: #363636; line-height: 1.6; padding: 8px 24px; }
+h1, h2, h3 { color: #121212; }
+a { color: #1e3da1; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #dfe4ec; padding: 6px 10px; text-align: left; }
+th { background: #f7f9f9; }
+code { background: #f7f9f9; padding: 1px 4px; border-radius: 4px; }
+img { max-width: 100%; }

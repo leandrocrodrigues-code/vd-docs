@@ -1,0 +1,82 @@
+# Configuração do editor visual (Decap CMS).
+# Quem pode editar = quem tem acesso de escrita ao repositório no GitHub.
+
+backend:
+  name: github
+  repo: leandrocrodrigues-code/vd-docs   # trocar pelo repo da TOTVS na migração
+  branch: main
+  # Serviço de login (OAuth). Ver README → "Login do editor".
+  base_url: https://TROCAR-PELO-SEU-WORKER.workers.dev
+  commit_messages:
+    create: 'docs: cria "{{slug}}" ({{author-login}})'
+    update: 'docs: atualiza "{{slug}}" ({{author-login}})'
+    delete: 'docs: remove "{{slug}}" ({{author-login}})'
+    uploadMedia: 'docs: envia {{path}}'
+    deleteMedia: 'docs: remove {{path}}'
+
+# Rascunho → Em revisão → Pronto pra publicar. Nada vai pro ar sem aprovação.
+publish_mode: editorial_workflow
+
+# Pra testar no próprio computador sem login: npm run cms + npm start
+local_backend: true
+
+locale: pt
+site_url: https://leandrocrodrigues-code.github.io/vd-docs/
+display_url: https://leandrocrodrigues-code.github.io/vd-docs/
+logo_url: /vd-docs/img/logo-azul.svg
+
+media_folder: static/img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: componentes
+    label: Componentes
+    label_singular: Componente
+    folder: docs/componentes
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    sortable_fields: ['title', 'sidebar_position']
+    fields: &campos
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Nome no menu', name: 'sidebar_label', widget: 'string', required: false, hint: 'Se vazio, usa o título.' }
+      - { label: 'Resumo (aparece na busca)', name: 'description', widget: 'string', required: false }
+      - { label: 'Ordem no menu', name: 'sidebar_position', widget: 'number', value_type: 'int', required: false, hint: 'Número menor aparece primeiro.' }
+      - { label: 'Conteúdo', name: 'body', widget: 'markdown', modes: ['rich_text', 'raw'], editor_components: ['image', 'code-block', 'figma', 'storybook'] }
+
+  - name: templates
+    label: Templates de tela
+    label_singular: Template
+    folder: docs/templates
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  - name: guias
+    label: Guias
+    label_singular: Guia
+    folder: docs/guias
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields: *campos
+
+  - name: paginas
+    label: Páginas fixas
+    files:
+      - label: Introdução (página inicial)
+        name: intro
+        file: docs/intro.md
+        fields:
+          - { label: 'Título', name: 'title', widget: 'string' }
+          - { label: 'Endereço', name: 'slug', widget: 'hidden', default: '/' }
+          - { label: 'Nome no menu', name: 'sidebar_label', widget: 'string' }
+          - { label: 'Ordem no menu', name: 'sidebar_position', widget: 'hidden', default: 1 }
+          - { label: 'Resumo', name: 'description', widget: 'string', required: false }
+          - { label: 'Conteúdo', name: 'body', widget: 'markdown', modes: ['rich_text', 'raw'], editor_components: ['image', 'code-block', 'figma', 'storybook'] }

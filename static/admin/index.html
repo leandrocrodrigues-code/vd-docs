@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Editor · Design System V&amp;D</title>
+  <link rel="icon" href="../img/favicon.svg" />
+</head>
+<body>
+  <!-- Editor visual (Decap CMS, open source). Servido pelo próprio site (sem CDN). -->
+  <script src="decap/decap-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle('preview.css');
+
+
+    // Botão "Figma" no editor: o designer cola o link e o site vira embed clicável.
+    CMS.registerEditorComponent({
+      id: 'figma',
+      label: 'Figma',
+      fields: [{ name: 'url', label: 'Link do Figma (arquivo, frame ou protótipo)', widget: 'string' }],
+      pattern: /^(https:\/\/(?:www\.)?figma\.com\/(?:proto|design|file|board|slides)\/\S+)$/m,
+      fromBlock: (m) => ({ url: m[1] }),
+      toBlock: (d) => (d.url || '').trim(),
+      toPreview: (d) => '<p>▶ Embed do Figma: ' + (d.url || '') + '</p>',
+    });
+
+    // Botão "Storybook" no editor: link do iframe de uma story.
+    CMS.registerEditorComponent({
+      id: 'storybook',
+      label: 'Storybook',
+      fields: [{ name: 'url', label: 'Link da story (…/iframe.html?id=…)', widget: 'string' }],
+      pattern: /^(https:\/\/\S+\/iframe\.html\?\S+)$/m,
+      fromBlock: (m) => ({ url: m[1] }),
+      toBlock: (d) => (d.url || '').trim(),
+      toPreview: (d) => '<p>▶ Embed do Storybook: ' + (d.url || '') + '</p>',
+    });
+  </script>
+</body>
+</html>

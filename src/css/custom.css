@@ -1,0 +1,197 @@
+/*
+ * Identidade V&D sobre o Infima (framework CSS do Docusaurus).
+ * Valores vêm de tokens/colors.json e tokens/colors.dark.override.json
+ * do repo vd-design-bridge.
+ */
+
+:root {
+  /* Marca */
+  --vd-brand-pure: #00dbff;
+  --vd-brand-card: #edfcff;
+  --vd-brand-container: #a0f2ff;
+  --vd-brand-highlight: #1e3da1;
+  --vd-on-brand: #002233;
+
+  /* Superfícies e conteúdo — Light */
+  --vd-surface-pure: #ffffff;
+  --vd-surface-card: #f7f9f9;
+  --vd-surface-container: #dfe4ec;
+  --vd-content-pure: #121212;
+  --vd-content-01: #363636;
+  --vd-content-02: #545454;
+  --vd-content-03: #8e8e8e;
+
+  /* Primária do Infima = Highlight (azul) — o Pure (#00DBFF) não tem contraste
+     suficiente pra texto de link sobre branco. */
+  --ifm-color-primary: #1e3da1;
+  --ifm-color-primary-dark: #1b3791;
+  --ifm-color-primary-darker: #1a3489;
+  --ifm-color-primary-darkest: #152a71;
+  --ifm-color-primary-light: #2143b1;
+  --ifm-color-primary-lighter: #2246b9;
+  --ifm-color-primary-lightest: #2a52d1;
+
+  --ifm-font-family-base: 'Lato', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Lato', system-ui, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-color-base: var(--vd-content-01);
+  --ifm-heading-color: var(--vd-content-pure);
+  --ifm-background-color: var(--vd-surface-pure);
+  --ifm-background-surface-color: var(--vd-surface-pure);
+  --ifm-toc-border-color: var(--vd-surface-container);
+  --ifm-hr-border-color: var(--vd-surface-container);
+  --ifm-table-border-color: var(--vd-surface-container);
+  --ifm-table-stripe-background: var(--vd-surface-card);
+  --ifm-global-radius: 8px;
+  --ifm-code-font-size: 92%;
+  --ifm-navbar-height: 56px;
+  --ifm-menu-color-background-active: var(--vd-brand-card);
+  --ifm-menu-color-active: var(--vd-brand-highlight);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --vd-brand-card: #002233;
+  --vd-brand-container: #004761;
+  --vd-brand-highlight: #a0f2ff;
+
+  --vd-surface-pure: #121212;
+  --vd-surface-card: #292929;
+  --vd-surface-container: #363636;
+  --vd-content-pure: #ffffff;
+  --vd-content-01: #dddddd;
+  --vd-content-02: #ababab;
+  --vd-content-03: #8e8e8e;
+
+  --ifm-color-primary: #00dbff;
+  --ifm-color-primary-dark: #00c5e6;
+  --ifm-color-primary-darker: #00bad9;
+  --ifm-color-primary-darkest: #0099b3;
+  --ifm-color-primary-light: #1ae0ff;
+  --ifm-color-primary-lighter: #26e1ff;
+  --ifm-color-primary-lightest: #4de7ff;
+  --ifm-background-surface-color: var(--vd-surface-card);
+  --ifm-menu-color-background-active: var(--vd-brand-card);
+  --ifm-menu-color-active: var(--vd-brand-pure);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* Barra superior no azul Highlight, como a Top Bar do V&D */
+.navbar {
+  background-color: #1e3da1;
+  box-shadow: none;
+}
+.navbar__title,
+.navbar__link,
+.navbar .clean-btn,
+.navbar__toggle {
+  color: #ffffff;
+}
+.navbar__link:hover,
+.navbar__link--active {
+  color: #a0f2ff;
+}
+[data-theme='dark'] .navbar {
+  background-color: #002233;
+  border-bottom: 1px solid #004761;
+}
+.navbar__logo {
+  height: 28px;
+}
+
+/* Sidebar */
+.menu__link {
+  font-size: 0.95rem;
+}
+
+/* Tabelas ocupam a largura toda */
+.markdown table {
+  display: table;
+  width: 100%;
+}
+
+/* Embeds do Figma e Storybook (links colados sozinhos numa linha) */
+.vd-embed {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--vd-surface-container);
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
+  background: var(--vd-surface-card);
+}
+.vd-embed--figma {
+  aspect-ratio: 16 / 10;
+}
+.vd-embed--storybook {
+  height: 420px;
+}
+
+/* Swatches de cor (Fundamentos → Cores) */
+.vd-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 0.5rem 0 2rem;
+}
+.vd-swatch {
+  border: 1px solid var(--vd-surface-container);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  background: var(--vd-surface-pure);
+}
+.vd-swatch__chip {
+  height: 64px;
+}
+.vd-swatch__info {
+  padding: 8px 10px;
+  line-height: 1.35;
+}
+.vd-swatch__name {
+  font-weight: 700;
+  color: var(--vd-content-pure);
+}
+.vd-swatch__value {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--vd-content-02);
+}
+
+/* Cartões da home */
+.vd-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+.vd-card {
+  display: block;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--vd-surface-container);
+  background: var(--vd-surface-card);
+  color: inherit;
+}
+.vd-card:hover {
+  text-decoration: none;
+  border-color: var(--ifm-color-primary);
+}
+.vd-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--vd-content-pure);
+}
+
+/* Link "Editar" sem o ícone de link externo */
+.navbar a[href$='/admin/'] svg {
+  display: none;
+}
+.navbar .navbar__search-input {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+.navbar .navbar__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.vd-swatch__value {
+  word-break: break-all;
+}

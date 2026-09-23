@@ -11,14 +11,14 @@ O código de cada componente (POUi e Delphi) fica no **[Storybook](https://leand
 
 | Grupo | Componentes | Status |
 |---|---|---|
-| Ações | Button, Buttons Group, Link Button | Button documentado |
-| Identidade | Marca, Avatar | A migrar |
-| Seleção | Checkbox, Radio, Toggle | A migrar |
-| Marcadores | Chips, Tag, Badge | A migrar |
-| Formulários | Text Input, Text Area, Search, Combobox, Dropdown, Date Picker, Calendar, Filter | A migrar |
-| Dados | Table (Grid), List Item, Charts | A migrar |
-| Feedback | Toast, Tooltip, Loading, Progress Status, Progress Bar, Stepper | A migrar |
-| Estrutura | Top Bar, Side Menu, Menu (Web), Breadcrumb, Hero, Section Header, Action Bar, Tabs, Accordion, Divider, Scroll bar | A migrar |
-| Containers | Cards, Modal, Drawer | A migrar |
+| Ações | Button, Button Group, Link Button | Documentado |
+| Identidade | Marca (em Fundamentos), Avatar | Marca documentada; Avatar não existe no styleguide |
+| Seleção | Checkbox, Radio, Toggle | Documentado |
+| Marcadores | Chips, Tag, Badge | Documentado |
+| Formulários | Text Input, Text Area, Search, Combobox, Dropdown, Date Picker, Filter | Documentado |
+| Dados | Table (Grid), List Item, List Item Group, Bar Charts, Donut Charts, Cargo Charts | Documentado |
+| Feedback | Toast, Tooltip, Loading Icon, Progress Status, Progress Bar, Stepper | Documentado |
+| Estrutura | Top Bar, Side Menu, Hero, Section Header, Action Bar, Tabs, Accordion, Divider, Scroll Bar | Documentado |
+| Containers | Card Data, Card Invoice, Card Status, Card Value, Card Dashboard, Card Copy, Card Uploader, Card Loading, Card List Item, Modal Feedback, Modal Progress | Documentado |
 
-"A migrar" = o código já pode estar no Storybook, mas o conteúdo de design (uso, boas práticas) ainda está no ZeroHeight e vai ser trazido pra cá.
+Todas as páginas listadas foram trazidas do ZeroHeight. Imagens ficaram marcadas com `> ⚠️ Revisar imagem: ...` porque o MCP retorna o pixel, não um arquivo baixável — precisam ser adicionadas manualmente em `static/img/uploads/<slug>/`.
